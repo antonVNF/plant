@@ -1,0 +1,145 @@
+@use '../variables' as vars;
+.page {
+  display: flex;
+}
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      border-color: #ccc;
+    }
+  }
+}
+
+.active {
+  border-color: #4caf50;
+}
+
+.gallery {
+  display: flex;
+  gap: 46px;
+  align-items: flex-start;
+}
+
+.mainImage {
+  width: 444px;
+  height: 444px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transition: background-size 0.4s ease, background-position 0.2s ease;
+}
+
+.info{
+  margin-left: 52px;
+}
+.flower__title{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.size {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 23px;
+}
+
+.price {
+  margin: 21px 0 28px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #4caf50;
+  padding-bottom: 12px;
+  border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+
+  span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 12px;
+  }
+}
+
+.countWrapper{
+  display: flex;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  span{
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .cart__item-button {
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: #e0e0e0;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &__plus,
+    &__minus {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.button__green {
+  border-radius: 6px;
+  background: linear-gradient(180.00deg, rgb(70, 163, 88),rgba(70, 163, 88, 0.8) 100%);
+  color: white;
+  padding: 12px 24px;
+  margin-left: 26px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+.desctiption{
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  span{
+  color: rgb(114, 114, 114)
+  }
+    color: rgb(165, 165, 165)
+}

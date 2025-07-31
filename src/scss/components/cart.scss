@@ -1,0 +1,161 @@
+@use '../variables' as vars;
+
+.cart {
+  &__total{
+    width: 100%;
+    max-width: 332px;
+
+    &-count{font-size: 18px;
+      font-weight: 700;
+      color: vars.$green;
+    }
+    &-content{
+      display: flex;
+      justify-content: space-between;
+      &__title{
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 29px;
+      }
+    }
+    &-title{
+      font-size: 18px;
+      font-weight: 700;
+      padding-bottom: 11px;
+      margin-top: 6px;
+      margin-bottom: 11px;
+      border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+    }
+  }
+  &__price{
+    display: flex;font-weight: 500;
+    position: relative;
+    span{
+      margin: 0 16px;
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  thead{
+    position: relative;
+    &::after{
+      content: '';
+      height: 1px;
+      width: 100%;
+      top: 28px;
+      display: block;
+      border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+      position: absolute;
+    }
+  }
+  tr {
+
+    th {
+      text-align: left;
+      padding-bottom: 11px;
+      font-weight: 500;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__products {
+    max-width: 782px;
+  }
+  &__item {
+    background-color: rgb(251, 251, 251);
+    max-height: 70px;
+    &-img-wrapper{
+      height: 70px;
+    }
+    &-img {
+      width: 70px;
+      height: 70px;
+    }
+    &-product {
+      display: flex;
+      width: 312px;
+    }
+    &-price{
+      width: 156px;
+      color: rgb(114, 114, 114);
+      font-weight: 500;
+    }
+    &-total{
+      width: 111px;
+      color: vars.$green;
+      font-weight: 500;
+    }
+
+    &-quantity{
+      width: 143px;
+      div{
+        display: inline;
+        margin-left: 16px;
+        margin-right: 11px;
+      }
+    }
+    &-delete{
+      width: 50px;
+      button{
+        cursor: pointer;
+
+      background-color: transparent;
+      border: none  ;
+      }
+    }
+    &-info {
+      margin-left: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 228px;
+    }
+    &-title {
+      font-weight: 500;
+    }
+    &-id {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgb(114, 114, 114);
+      margin-top: 6%;
+      h4 {
+        display: inline;
+        font: inherit;
+        color: rgb(165, 165, 165);
+      }
+    }
+    &-button{
+      line-height: 16px;
+      border-radius: 31px;
+      width: 22px;
+      height: 25px;
+      color: white;
+      background-color: vars.$green;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  &__send-button{
+    border-radius: 3px;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    background-color: vars.$green;
+  }
+  &__back-button{
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+    color: vars.$green;
+  }
+}

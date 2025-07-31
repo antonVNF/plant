@@ -1,0 +1,21 @@
+@use './_variables.scss' as vars;
+@use './libs/_normalize.scss' as normalize;
+
+@use './components/_all.scss' as components;
+
+.wrapper {
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  color: #fff;
+  border-radius: 6px;
+  background-color: vars.$green;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+}

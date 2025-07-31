@@ -1,0 +1,36 @@
+@use '../variables' as vars;
+
+.pagination {
+  margin-top: 90px;
+  margin-left: auto;
+  ul {
+    display: flex;
+    justify-content: right;
+  }
+  li {
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 4px;
+    padding: 9px 13px;
+    margin-left: 10px;
+    transition: all .3s;
+    &:hover{
+        background-color: vars.$green;
+        a{
+            color: #fff;
+
+        }
+    }
+  }
+}
+
+.selected{
+    background-color: vars.$green;
+    a{
+        color: #fff;
+
+    }
+}
+
+.disabled{
+    opacity: .3;
+}

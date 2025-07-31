@@ -1,0 +1,131 @@
+@use '../variables' as vars;
+
+.plant__block {
+  position: relative;
+  max-width: 258px;
+  height: 350px;
+  overflow: hidden;
+
+  &-img {
+    background: rgb(251, 251, 251);
+    margin-bottom: 12px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    img {
+      width: 258px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 7px;
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  &-title {
+    height: 16px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
+
+  &:hover {
+    .plant__block-buttons {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: vars.$green;
+      z-index: 1;
+    }
+  }
+}
+
+.price {
+  color: vars.$green;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+
+  span {
+    margin-left: 17px;
+    font-size: 18px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgb(203, 203, 203);
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+    color: rgb(165, 165, 165);
+  }
+
+  &__discount {
+    display: none;
+  }
+}
+
+.discount {
+  padding: 7px 8px;
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  background-color: vars.$green;
+  color: #fff;
+}
+
+.no-discount {
+  display: none;
+}
+
+.plant__block-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+  svg g path {
+    fill: #000;
+    transition: all 0.3s;
+  }
+  &:hover {
+    svg g path {
+      fill: vars.$green;
+    }
+  }
+}

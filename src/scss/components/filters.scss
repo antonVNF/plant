@@ -1,0 +1,97 @@
+@use '../variables' as vars;
+.categories {
+  background-color: vars.$background;
+  padding: 14px 24px 19px 18px;
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+}
+
+.categories-list {
+  padding-left: 12px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    cursor: pointer;
+    &:hover {
+      h6,
+      span {
+        transition: all 0.3s;
+        color: vars.$green;
+      }
+    }
+    &.active {
+      h6,
+      span {
+        color: vars.$green;
+      }
+    }
+    h6 {
+      font: inherit;
+    }
+  }
+}
+
+.range-slider {
+  padding-top: 36px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__content {
+    padding: 0 66px 0 12px;
+  }
+  &__range {
+    font-size: 15px;
+    line-height: 16px;
+    span {
+      font: inherit;
+      font-weight: 700;
+      color: vars.$green;
+    }
+  }
+  &__button {
+    margin-top: 16px;
+    padding: 8px 25px;
+  }
+}
+
+.css-r64h58-MuiSlider-rail,
+.css-xvk2i-MuiSlider-track {
+  background-color: vars.$green !important;
+  border: none !important ;
+}
+
+.css-1xcmt9q-MuiSlider-thumb {
+  background-color: vars.$green !important;
+  border: 3px solid #fff;
+}
+
+.category-size {
+  &__list {
+    padding-left: 12px;
+    &-item {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+      &.active {
+        div {
+          color: vars.$green;
+        }
+      }
+      &:hover {
+        &:nth-child(1n) {
+          div {
+          color: vars.$green;
+          }
+        }
+      }
+    }
+  }
+}

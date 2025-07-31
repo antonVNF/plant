@@ -1,0 +1,83 @@
+@use '../variables' as vars;
+
+.header {
+  margin-top: 25px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 17px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  }
+  &__logo {
+    width: 150px;
+    height: 35px;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+}
+.search {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  font-weight: 500;
+  svg {
+    margin-right: 5px;
+  }
+}
+.cart {
+  margin: 0 30px;
+  position: relative;
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    background-color: vars.$green;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 0 2px white;
+  }
+}
+
+.navigate-list {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &-title {
+      display: inline;
+      &.active {
+        font-weight: 700;
+        border-bottom: 3px solid vars.$green;
+        padding-bottom: 23px;
+      }
+      &:hover {
+        font-weight: 700;
+        transition: font-weight 0.3s;
+        border-bottom: 3px solid vars.$green;
+        padding-bottom: 23px;
+      }
+    }
+  }
+}

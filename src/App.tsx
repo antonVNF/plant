@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router";
 import "./scss/app.scss";
 import Home from "./pages/home";
 import Cart from "./pages/Cart";
-import FlowerPage from "./pages/FlowerPage.js";
-import MainLayout from "./layouts/MainLayout.js";
-import NotFound from "./pages/NotFound.jsx";
+import FlowerPage from "./pages/FlowerPage";
+import MainLayout from "./layouts/MainLayout";
+import NotFound from "./pages/NotFound";
 export const App = () => {
 	return (
 		<>

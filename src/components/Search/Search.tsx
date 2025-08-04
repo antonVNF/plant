@@ -1,8 +1,8 @@
 import React from "react";
 import debounce from 'lodash.debounce';
 import { useCallback, useRef, useState } from 'react';
-import { useDispatch } from "react-redux";
 import { setSearch } from "../../redux/slices/filterSlice";
+import { useAppDispatch } from "../../hooks/reduxHooks";
 
 type SearchProps = {
 	open: boolean;
@@ -12,7 +12,7 @@ type SearchProps = {
 const Search: React.FC<SearchProps> = ({ open, handleToggle }) => {
   const [value, setValue] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const handleClickClear = () => {
     setValue('');
     dispatch(setSearch(''));

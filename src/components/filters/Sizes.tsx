@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { setActiveSizes } from "../../redux/slices/filterSlice";
 import type { Size, ActiveSize } from '../../redux/slices/filterSlice';
 

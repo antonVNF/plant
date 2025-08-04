@@ -6,9 +6,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { addItem } from "../redux/slices/cartSlice";
-import { useDispatch } from "react-redux";
 import {categories} from "../components/filters/Categories";
 import {formatCurrency} from "../utils/formatCurrency";
+import { useAppDispatch } from "../hooks/reduxHooks";
 
 type Flower = {
 	finalPrice: number;
@@ -25,7 +25,7 @@ const FlowerPage = () => {
 	const [flower, setFlower] = useState<Flower>();
 	const [count, setCount] = useState(1);
 	const [activeImage, setActiveImage] = useState(0);
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const { id } = useParams();
 	const navigate = useNavigate();
 

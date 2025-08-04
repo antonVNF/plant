@@ -1,17 +1,18 @@
 import logo from '../../assets/img/group.png';
+import React, { useMemo } from "react";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { useSelector } from "react-redux";
-import { selectCart } from "../../redux/slices/cartSlice.js";
+import { selectCart } from "../../redux/slices/cartSlice";
 import Search from "../Search/Search";
+import { useAppSelector } from "../../hooks/reduxHooks";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const { items } = useSelector(selectCart);
-  const cartCount = items.reduce((acc: number, item) => {
+  const { items } = useAppSelector(selectCart);
+  const cartCount = useMemo(() =>( items.reduce((acc: number, item) => {
 	  console.log(acc, item);
     return acc + item.count;
-  }, 0);
+  }, 0)), [items]);
   const handleToggle = () => {
     setOpen(!open);
   };
@@ -138,4 +139,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

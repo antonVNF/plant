@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { setSortPopUp, SortType } from "../../redux/slices/filterSlice";
-import { useAppSelector, useAppDispatch } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks/reduxHooks";
 
 const sortInfo: SortType[] = [
 	{ name: 'Default', sortProperty: 'default' },

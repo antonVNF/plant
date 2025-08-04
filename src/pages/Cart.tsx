@@ -3,11 +3,11 @@ import CartItem from '../components/CartItem.js';
 import {Link} from "react-router-dom";
 import { CartEmpty } from "../components/CartEmpty";
 import { selectCart } from "../redux/slices/cartSlice.js";
-import { useAppSelector } from "../hooks";
+import { useAppSelector } from "../hooks/reduxHooks";
 
 const Cart = () => {
   const { items, totalPrice } = useAppSelector(selectCart);
-	console.log(items);
+	// console.log("render");
 	if (items.length === 0) return <CartEmpty />;
 
   return (

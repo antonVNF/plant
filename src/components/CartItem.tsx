@@ -1,7 +1,7 @@
 import { deleteItem, minusItemCount, addItem, CartItemType } from "../redux/slices/cartSlice.js";
 import  DeleteIcon from '../assets/img/delete-icon.svg?react';
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "../hooks";
+import { useAppDispatch } from "../hooks/reduxHooks";
 import React from "react";
 
 type CartItemProps = {

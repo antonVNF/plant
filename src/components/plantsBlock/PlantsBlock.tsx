@@ -1,10 +1,10 @@
 import React from 'react';
 import { addItem } from '../../redux/slices/cartSlice';
-import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import SearchIcon from "../../assets/img/search.svg?react"
 import CartIcon from "../../assets/img/cart-icon.svg?react"
 import HeartIcon from '../../assets/img/heart-icon.svg?react';
+import { useAppDispatch } from "../../hooks/reduxHooks";
 interface PlantsBlockProps  {
 	discount:  number;
 	finalPrice: number;
@@ -16,7 +16,7 @@ interface PlantsBlockProps  {
 }
 
 const PlantsBlock = ({ discount, finalPrice, id, imageUrl, name, price, size }: PlantsBlockProps ) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const obj: PlantsBlockProps = {
     id,
     name,

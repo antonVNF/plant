@@ -1,4 +1,4 @@
-import { useAppSelector, useAppDispatch } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks/reduxHooks";
 import { filterSelect, setCategories, setCurrentPage } from "../../redux/slices/filterSlice";
 
 interface CategoriesProps {

@@ -1,8 +1,9 @@
 import React from 'react';
 import { sortList } from './SortList';
-import { useAppSelector, useAppDispatch } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks/reduxHooks";
 import { setSort, SortType } from "../../redux/slices/filterSlice";
 const Sort = () => {
+	console.log("render");
 	const dispatch = useAppDispatch();
 	const {sort} = useAppSelector((state) => state.filter);
 

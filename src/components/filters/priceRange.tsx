@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import { setRange } from '../../redux/slices/filterSlice';
-import { useAppSelector, useAppDispatch } from '../../hooks';
+import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks';
 
 const PriceRange = () => {
 	const { range } = useAppSelector(state => state.filter);
